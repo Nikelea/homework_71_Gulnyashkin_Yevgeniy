@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %}Publications{% endblock %}
+
+{% block content %}
+<style>
+  .truncate {
+    /*background: #f4eddf; !* Цвет фона *!*/
+    padding: 10px;
+    /* Поля вокруг текста */
+    white-space: nowrap;
+    /* Текст не переносится */
+    overflow: hidden;
+    /* Обрезаем всё за пределами блока */
+    text-overflow: ellipsis;
+    /* Добавляем многоточие */
+  }
+</style>
+
+<h1>Publications list</h1>
+<br>
+{% for publication in publications %}
+<div class="card" style="width: 40rem;">
+  <img class="card-img-top" src="{{ publication.image.url }}" alt="Card image cap">
+  <div class="card-body">
+    <p class="card-text; truncate">{{ publication }}</p>
+    <b id="b{{publication.id}}"> | &nbsp; {{ publication.likes.all.count }} people liked this &nbsp; | &nbsp;
+      {{ publication.comments_counter }} сomments </b>
+      
+      <input type="hidden" value="{{request.user.id}}" id="request.user.id">
+      <a href="" name="like-btn" id="{{publication.id}}" class="btn btn-primary like-btn">
+      {% if request.user in publication.likes.all %}
+      Unlike
+      {% else %}
+      Like
+      {% endif %}
+    </a>
+    <a href="{% url 'publications:detail' publication.pk %}" class="btn btn-primary">More</a>
+  </div>
+</div>
+<br>
+{% endfor %}
+{% endblock %}

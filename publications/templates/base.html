@@ -1,0 +1,74 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+    <title>{% block title %} {% endblock %}</title>
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light d-flex align-items-center" style="z-index: 1">
+        <div class=" d-flex align-items-baseline">
+        {% if request.user.is_authenticated %}
+            <a class="ms-5 row d-flex  pt-3" href="{% url 'publications:index' %}"><img style="width:110px"  src="{% static 'img/icon/insta-logo.png' %}" alt="insta"></a>
+        {% endif %}
+            <ul class="menu col-md-10 d-flex justify-content-center" style="font-size: 25px;">
+                {% if user.is_authenticated %}
+                    <li>
+                    <form class="ms-5  ps-5 menu d-flex justify-content-center" method="get">
+                        <input class="form-control me-2" name="search" type="search" placeholder="Search" value="{{ form.search.value|default:'' }}" aria-label="Search">
+                        <button class="btn btn-outline-light" type="submit">Search</button>
+                    </form>
+                </li>
+                <li><a href="{% url 'accounts:profile' user.pk %}"><img style="width:25px" src="{% static 'img/icon/icon-house.png' %}" alt="house"></a></li>|
+                <li><a href="{% url 'accounts:user_list' %}"><img style="width:25px" src="{% static 'img/icon/icon-messenger.png' %}" alt="messenger"></a></li>|
+                <li><a href="{% url 'publications:create' %}?next={{ request.path }}"><img style="width:25px" src="{% static 'img/icon/icon-instagram-post.png' %}" alt="new publication"></a></li>|
+                <li class="menu-right">
+                    <form action="{% url 'accounts:logout' %}" method="post">
+                        {% csrf_token %}
+                        <button class="btn btn-light" id="logout" style="margin-left: 15px">Logout</button>
+                    </form>
+                    <script>
+                        const getlogout = function () {
+                            let logout = document.getElementById('logout')
+                            console.log('Weee');
+                            $.ajax({
+                                url: 'http://localhost:8000/api/v2/logout/',
+                                method: 'post',
+                                headers: { 'Authorization': 'Token ' + localStorage.getItem('apiToken') },
+                                dataType: 'json',
+                                contentType: 'application/json',
+                                success: function (response, status) { localStorage.removeItem('apiToken', response.token); },
+                                error: function (response, status) { console.log(response); }
+                            });
+                        }
+                        let exit = logout.addEventListener('click', getlogout)
+                    </script>
+                </li>
+                {% else %}
+                    <li><a href="{% url 'accounts:login' %}?next={{ request.path }}" style="color: #ffc122">Login</a></li>|
+                    <li><a href="{% url 'accounts:register' %}?next={{ request.path }}" style="color: #ffc122">Register</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        {% block menu_links %}
+        {% endblock %}
+        {% block content %}
+        {% endblock %}
+    </div>
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+  <script src="{% static 'js/script.js'%}"></script>
+</body>
+</html>
+

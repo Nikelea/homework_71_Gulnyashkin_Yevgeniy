@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load crispy_forms_filters %}
+
+{% block title %}Registration{% endblock %}
+{% block content %}
+    <h1>Registration</h1>
+    <form action="{% url "accounts:register" %}{% if next_path %}?next={{ next_path }}{% endif %}"
+          method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form|crispy }}
+        {{profile_form|crispy}}
+        <br>
+        <button class="btn btn-success">Sign Up</button>
+    </form>
+{% endblock %}

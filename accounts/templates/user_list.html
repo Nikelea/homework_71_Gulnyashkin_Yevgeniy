@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}User list{% endblock %}
+
+{% block content %}
+    {% for user in users %}
+            <div class="card" style="width: 16rem;">
+              {% if user.profile.avatar %}
+                <img style="margin: 2px;" class="avatar" src="{{ user.profile.avatar.url }}" width="250" height="250" alt="user picture">
+              {% endif %}
+
+              <div class="card-body">
+                <p class="card-text">{{ user }}</p>
+                <a href="{% url 'accounts:profile' user.pk %}" class="btn btn-primary">More</a>
+              </div>
+            </div>
+            <br>
+    {% endfor %}
+{% endblock %}

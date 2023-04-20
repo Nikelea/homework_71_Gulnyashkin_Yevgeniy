@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}Profile{% endblock %}
+
+{% block content %}
+    <a href="{% url 'accounts:user_list' %}" class="btn btn-primary">Back</a>
+     <div class="card" style="width: 20rem;">
+      {% if user.profile.avatar %}
+      <img class="card-img-top" src="{{ user.profile.avatar.url }}" alt="Card image cap">
+      {% endif %}
+      <div class="card-body">
+        <p class="card-text"><b>username:</b> {{ user.username }}</p>
+        <p class="card-text"><b>name:</b> {{ user.first_name }}</p>
+        <p class="card-text"><b>email:</b> {{ user.email }}</p>
+        <p class="card-text"><b>phone:</b> {{ user.profile.phone }}</p>
+        <p class="card-text"><b>sex:</b> {{ user.profile.sex }}</p>
+        <p class="card-text"><b>about:</b> {{ user.profile.about }}</p>
+        {% for follower in followers%}
+        <p class="card-text"><b>Followers:</b> {{ follower.user }}</p>
+        {%endfor%}
+      </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}Publications{% endblock %}
+
+{% block content %}
+<h1> {{ publication.user }}'s publication </h1>
+    <br>
+    <div class="card" style="width: 40rem;">
+      <img class="card-img-top" src="{{ publication.image.url }}" alt="Card image cap">
+      <div class="card-body">
+        <p class="card-title">
+          <form action="{% url 'publications:like_publication' publication.pk %}" method="POST">
+            {% csrf_token %}
+            <button type="submit" name="publication_id" value="{{ publication.id }}" class="btn btn-primary">
+
+                {% if request.user in publication.likes.all %}
+                    Unlike 
+                {% else  %}
+                    Like
+                {% endif %}
+            </button>
+          </form>
+            &nbsp;
+            <b> | &nbsp; {{ publication.likes.all.count }} people liked this &nbsp; | &nbsp;
+                {{ publication.comments_counter }} сomments </b></p>
+        <p class="card-text">{{ publication }}</p>
+        <a href="{% url 'publications:index' %}" class="btn btn-primary">Back to the list</a>
+      </div>
+    </div>
+    <br>
+{% endblock %}
+
