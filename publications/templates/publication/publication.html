@@ -9,6 +9,7 @@
       <img class="card-img-top" src="{{ publication.image.url }}" alt="Card image cap">
       <div class="card-body">
         <p class="card-title">
+          {% if user.is_authenticated %}
           <form action="{% url 'publications:like_publication' publication.pk %}" method="POST">
             {% csrf_token %}
             <button type="submit" name="publication_id" value="{{ publication.id }}" class="btn btn-primary">
@@ -18,6 +19,9 @@
                 {% else  %}
                     Like
                 {% endif %}
+          {% else %}
+                
+          {% endif %}
             </button>
           </form>
             &nbsp;
