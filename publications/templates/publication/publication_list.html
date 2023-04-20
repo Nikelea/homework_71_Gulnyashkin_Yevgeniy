@@ -28,11 +28,13 @@
       {{ publication.comments_counter }} сomments </b>
       
       <input type="hidden" value="{{request.user.id}}" id="request.user.id">
+      {% if user.is_authenticated %}
       <a href="" name="like-btn" id="{{publication.id}}" class="btn btn-primary like-btn">
       {% if request.user in publication.likes.all %}
       Unlike
       {% else %}
       Like
+      {% endif %}
       {% endif %}
     </a>
     <a href="{% url 'publications:detail' publication.pk %}" class="btn btn-primary">More</a>

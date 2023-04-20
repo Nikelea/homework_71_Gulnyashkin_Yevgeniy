@@ -52,21 +52,6 @@ class PubViewSet(viewsets.ModelViewSet):
         return Response({'status': 'ok', 'result': result, 'count': publication.likes_counter, 'comment': comments})
 
 
-def like_publication(request, pk):
-    publication = get_object_or_404(Publication, id=request.POST.get('publication_id'))
-    if request.user in publication.likes.all():
-        publication.likes.remove(request.user)
-        publication.likes_counter = publication.likes.count()
-    else:
-        publication.likes.add(request.user)
-        publication.likes_counter = publication.likes.count()
-    publication.save()
-    # return HttpResponseRedirect(reverse('publications:detail', args=[str(pk)]))
-
-
-
-
-
 class LogoutView(APIView):
     permission_classes = [IsAuthenticated, ]
 
@@ -111,6 +96,3 @@ class PubDetailView(APIView):
         object = get_object_or_404(Publication, pk=kwargs.get('pk'))
         object.delete()
         return Response({'deleted': kwargs.get('pk') })
-
-
-
