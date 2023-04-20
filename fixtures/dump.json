@@ -1,0 +1,330 @@
+[
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$320000$GxJ0PnqtHw1feWGL27O12l$sS7aOW6i+MDo8Ky1YMYBuE+s1DxObdaZuJhpAX066QU=",
+    "last_login": "2023-04-20T08:13:00.522Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2022-03-08T17:29:26.394Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$320000$1lsUEQg8F9u6ZTow6IoDmB$UmXcNoBQHDLTWYB6uPWl0WmvHDNBgBlHFKctyQic0+M=",
+    "last_login": "2022-03-09T11:08:02.171Z",
+    "is_superuser": false,
+    "username": "dev",
+    "first_name": "developer",
+    "last_name": "",
+    "email": "dev@dev.kz",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2022-03-09T06:30:59.476Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$320000$wqHuYJDCRcyN5MXeSkCkAM$+f/NFCGEbXoh/uFvJt8h8UDE2+IY6mwpdCaxrByAVx8=",
+    "last_login": "2022-03-10T18:53:50.221Z",
+    "is_superuser": false,
+    "username": "Tima",
+    "first_name": "Timur Zairov",
+    "last_name": "",
+    "email": "zairov_5991@mail.ru",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2022-03-10T16:11:12.498Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$320000$7NesikBZguoPmMzE6Htfwg$boqwXcDKjA9KJICIIJy6N1foMO+I2f3QLxR60AhL52c=",
+    "last_login": "2022-03-10T19:27:14.079Z",
+    "is_superuser": false,
+    "username": "petya11",
+    "first_name": "Petr",
+    "last_name": "",
+    "email": "mail@mail.ru",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2022-03-10T19:27:13.848Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$320000$0M5zN2y9OVGkEjH8oTIaXl$XxqHjUa/5boPDmn1tsQFRx7TShYFOwz//W+kawQ5O6E=",
+    "last_login": "2023-04-19T15:18:57.579Z",
+    "is_superuser": false,
+    "username": "dddd",
+    "first_name": "dddd",
+    "last_name": "",
+    "email": "dddd@d.dd",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-04-19T15:18:57.490Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$320000$hYmpYDI7jsBhfmvJoGDaJN$SevX/h0Aw+DkUNCuUWL+YM273wjItxvF0y6XkjhXP6s=",
+    "last_login": "2023-04-20T07:07:38.830Z",
+    "is_superuser": false,
+    "username": "aaa",
+    "first_name": "aaa",
+    "last_name": "",
+    "email": "aaa@a.aa",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-04-20T06:25:48.966Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "80pzlnmt4j4bexdkdrrch4sx4ik2b2u4",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hCGTkFcuu8ZyMAMUjVtUtqV8e7apAvd_vfef6lI21rj1mSJI6uLAnX63RLlh0w74DtNt1nneVqXMeld0QdtephZntfD_Tuo1Oq3NuKyhUQEPYtHct5hwNzb4gsCMNicxCQfSg7mbLtOXGAsJnHhDhHU-wPm9Df3:1pp4xC:UzFZg6ySC09cC0dDE9L_ssZBcEK6seEE8bRRD8O3St4",
+    "expire_date": "2023-05-03T10:22:22.056Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "9x9agueyyrkvdsg31ztqiczggppbhyc0",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hBICwMu3XsGMsMMUjU0Ke3KeHdt0oVu_3vvv1TCba1p67KkidVZuUGdfkfC_JC2E75ju806z21dJtK7og_a9XVmeV4O9--gYq_f2hsmGyJl4QCjxWhHxwx-gGIlFKRIRsRjQcaQ0UcALAYDZydGIqj3By03OWs:1ppNjp:V4FfGp-Bl7bedusyNRXH2gBsYGhoYpirjAQQ9DNoV5M",
+    "expire_date": "2023-05-04T06:25:49.145Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "k1gde288ltmpxvhl4nvlopf1ol8aihmf",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hCGTkFcuu8ZyMAMUjVtUtqV8e7apAvd_vfef6lI21rj1mSJI6uLAnX63RLlh0w74DtNt1nneVqXMeld0QdtephZntfD_Tuo1Oq3NuKyhUQEPYtHct5hwNzb4gsCMNicxCQfSg7mbLtOXGAsJnHhDhHU-wPm9Df3:1ppPPY:Ca4DTUtvRjrXF-i1YfwVvGVRaQyDbeZmqCHRaH_Rik0",
+    "expire_date": "2023-05-04T08:13:00.525Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "udsubg62bzm6wncap2eybcfqlee2vgez",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hBICwMu3XsGMsMMUjU0Ke3KeHdt0oVu_3vvv1TCba1p67KkidVZuUGdfkfC_JC2E75ju806z21dJtK7og_a9XVmeV4O9--gYq_f2hsmGyJl4QCjxWhHxwx-gGIlFKRIRsRjQcaQ0UcALAYDZydGIqj3By03OWs:1ppNqP:GkOundk6lx9-O6BtRsNglQNoHvIR29h_qbLeU8k0QXE",
+    "expire_date": "2023-05-04T06:32:37.128Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "xa4s39z3b72djg1v7l0ltp7kmfcj8qqr",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hCGTkFcuu8ZyMAMUjVtUtqV8e7apAvd_vfef6lI21rj1mSJI6uLAnX63RLlh0w74DtNt1nneVqXMeld0QdtephZntfD_Tuo1Oq3NuKyhUQEPYtHct5hwNzb4gsCMNicxCQfSg7mbLtOXGAsJnHhDhHU-wPm9Df3:1pp5Py:xyIOqmbX576b5IfguAEKYIzvk9F4BG4y2o9PbOy172E",
+    "expire_date": "2023-05-03T10:52:06.273Z"
+  }
+},
+{
+  "model": "authtoken.token",
+  "pk": "377726d44174d10e949783502b3808d45771ee9c",
+  "fields": {
+    "user": [
+      "aaa"
+    ],
+    "created": "2023-04-20T07:07:38.820Z"
+  }
+},
+{
+  "model": "authtoken.token",
+  "pk": "dc082dc81b5944dd122146ed3092a80bb1ff748c",
+  "fields": {
+    "user": [
+      "admin"
+    ],
+    "created": "2023-04-20T08:13:00.514Z"
+  }
+},
+{
+  "model": "accounts.sex",
+  "pk": 1,
+  "fields": {
+    "title": "Man"
+  }
+},
+{
+  "model": "accounts.sex",
+  "pk": 2,
+  "fields": {
+    "title": "Woman"
+  }
+},
+{
+  "model": "accounts.profile",
+  "pk": 1,
+  "fields": {
+    "user": [
+      "admin"
+    ],
+    "avatar": "",
+    "about": "",
+    "phone": null,
+    "sex": null,
+    "publications_counter": 0,
+    "subscriptions_counter": 0,
+    "subscribers_counter": 0
+  }
+},
+{
+  "model": "accounts.profile",
+  "pk": 2,
+  "fields": {
+    "user": [
+      "dev"
+    ],
+    "avatar": "",
+    "about": "",
+    "phone": null,
+    "sex": null,
+    "publications_counter": 0,
+    "subscriptions_counter": 0,
+    "subscribers_counter": 0
+  }
+},
+{
+  "model": "accounts.profile",
+  "pk": 3,
+  "fields": {
+    "user": [
+      "Tima"
+    ],
+    "avatar": "",
+    "about": "",
+    "phone": null,
+    "sex": null,
+    "publications_counter": 0,
+    "subscriptions_counter": 0,
+    "subscribers_counter": 0
+  }
+},
+{
+  "model": "accounts.profile",
+  "pk": 4,
+  "fields": {
+    "user": [
+      "petya11"
+    ],
+    "avatar": "",
+    "about": "",
+    "phone": null,
+    "sex": null,
+    "publications_counter": 0,
+    "subscriptions_counter": 0,
+    "subscribers_counter": 0
+  }
+},
+{
+  "model": "accounts.profile",
+  "pk": 5,
+  "fields": {
+    "user": [
+      "dddd"
+    ],
+    "avatar": "user_pics/2023-04-18_13-18.png",
+    "about": "",
+    "phone": null,
+    "sex": null,
+    "publications_counter": 0,
+    "subscriptions_counter": 0,
+    "subscribers_counter": 0
+  }
+},
+{
+  "model": "accounts.profile",
+  "pk": 6,
+  "fields": {
+    "user": [
+      "aaa"
+    ],
+    "avatar": "user_pics/2023-04-18_13-18_HeIzhLD.png",
+    "about": "",
+    "phone": null,
+    "sex": null,
+    "publications_counter": 0,
+    "subscriptions_counter": 0,
+    "subscribers_counter": 0
+  }
+},
+{
+  "model": "publications.publication",
+  "pk": 1,
+  "fields": {
+    "user": [
+      "dev"
+    ],
+    "image": "images/nature-pic_QxwAn0M.jpg",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    "likes_counter": 2,
+    "comments_counter": 0,
+    "likes": [
+      [
+        "admin"
+      ],
+      [
+        "aaa"
+      ]
+    ]
+  }
+},
+{
+  "model": "publications.publication",
+  "pk": 2,
+  "fields": {
+    "user": [
+      "admin"
+    ],
+    "image": "images/image_7867-Cats.jpg",
+    "description": "5555555",
+    "likes_counter": 2,
+    "comments_counter": 0,
+    "likes": [
+      [
+        "admin"
+      ],
+      [
+        "aaa"
+      ]
+    ]
+  }
+},
+{
+  "model": "publications.publication",
+  "pk": 3,
+  "fields": {
+    "user": [
+      "admin"
+    ],
+    "image": "images/images.jpeg",
+    "description": "Catz",
+    "likes_counter": 0,
+    "comments_counter": 0,
+    "likes": []
+  }
+}
+]
