@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<h4>Please enter your username and password</h4>
+<br>
+<form action="{% url  'accounts:login' %}{% if next_path %}?next={{ next_path }}{% endif %}" method="post">
+    {% csrf_token %}
+    {% if has_error %}
+    <p>Wrong username or password</p>
+    {% endif %}
+    <p><input type="text" id="username" name="username" placeholder="Username"></p>
+    <p><input type="text" id="email" name="email" placeholder="Email"></p>
+    <p><input type="password" id="pass" name="password" placeholder="Password"></p>
+    <input type="hidden" name="next" value="{{ request.GET.next }}">
+    <button id="Login" class="btn btn-success">Login</button> or
+    <a href="{% url 'accounts:register' %}">Register</a>
+</form>
+<script>
+     const getlogin = function () {
+        let username = document.getElementById('username')
+        let password = document.getElementById('pass')
+        $.ajax({
+            url: 'http://localhost:8000/api/v2/login/',
+            method: 'post',
+            data: JSON.stringify({ username: username.value, password: password.value }),
+            dataType: 'json',
+            contentType: 'application/json',
+            success: function (response, status) {localStorage.setItem('apiToken', response.token); },
+            error: function (response, status) { console.log(response); }
+        });
+    }
+    let send = document.getElementById('Login').addEventListener('click', getlogin)
+</script>
+{% endblock %}
